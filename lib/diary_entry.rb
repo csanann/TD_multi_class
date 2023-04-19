@@ -1,22 +1,22 @@
 # File: lib/diary_entry.rb
 class DiaryEntry
     def initialize(title, contents) # title, contents are strings
-      @title = title
-      @contents = contents
-      @words_read = 0
+     @title = title
+     @contents = contents
+     # @words_read = 0
     end
   
     def title
-      # Returns the title as a string
+      return @title
     end
   
     def contents
-      # Returns the contents as a string
+      return @contents
     end
   
     def count_words
-        @contents.split
-      # Returns the number of words in the contents as an integer
+      return 0 if @contents.empty?
+      return @contents.count(" ") + 1
     end
   
     def reading_time(wpm) # wpm is an integer representing
